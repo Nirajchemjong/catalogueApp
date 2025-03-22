@@ -41,8 +41,8 @@ class CatalogueController extends Controller
         return Inertia::render('Catalogue', [
             'data' => $data,
             'quote' => [
-                'message' => 'Life is available only in the present moment.',
-                'author' => 'Thich Nhat Hanh',
+                'message' => 'This is a Acron Take Home Project',
+                'author' => 'Niraj Chemjong',
             ],
         ]);
     }
