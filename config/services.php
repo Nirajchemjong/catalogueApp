@@ -34,20 +34,13 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-
-    'workos' => [
-        'client_id' => env('WORKOS_CLIENT_ID'),
-        'secret' => env('WORKOS_API_KEY'),
-        'redirect_url' => env('WORKOS_REDIRECT_URL'),
-    ],
     'api' => [
         'base_url' => env('ACRON_API_BASE_URL'),
-        'external_api_path' => env('API_EXTERNAL_API_PATH' ),
-        'acron_api_key' =>env('ACRON_API_KEY'),
-        'tenancy_id'=> env('API_TENANCY_ID'), 
-        'perPage'=> env('API_PER_PAGE'),
-        
+        'external_api_path' => env('API_EXTERNAL_API_PATH'),
+        'acron_api_key' => env('ACRON_API_KEY'),
+        'tenancy_id' => env('API_TENANCY_ID'),
+        'perPage' => env('API_PER_PAGE'),
+
     ]
-    
 
 ];

@@ -1,18 +1,22 @@
 <?php
 
-namespace App\Services\Catalogue;
+namespace App\Services;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
 class CatalogueServices
 {
+    /**
+     * Create a new class instance.
+     */
     private $client;
 
     public function __construct()
     {
+        //
         // Retrieve the API key from configuration
-        $apiKey = config('services.api.acron_api_key' );
+        $apiKey = config('services.api.acron_api_key');
         $this->client = new Client([
             'base_uri' => config('services.api.base_url'),
             'headers'  => [
@@ -21,7 +25,6 @@ class CatalogueServices
             ]
         ]);
     }
-
     /**
      * Fetch catalogue content using Guzzle.
      *
@@ -43,22 +46,16 @@ class CatalogueServices
                 'query' => ['perPage' => $perPage]
             ]);
 
-            // Get the response body and decode JSON
+
             $body = $response->getBody()->getContents();
             $data = json_decode($body, true);
 
-            // Check for JSON errors
             if (json_last_error() !== JSON_ERROR_NONE) {
                 throw new \Exception('Failed to decode JSON: ' . json_last_error_msg());
             }
-
-            // Verify the expected response structure exists
             if (!isset($data['data']['items'])) {
                 throw new \Exception('Unexpected API response format.');
             }
-            // echo $data;
-
-            // Return the catalogue items
             return $data['data']['items'];
         } catch (RequestException $e) {
             // Wrap and rethrow exceptions as needed
