@@ -7,7 +7,6 @@ interface Props {
     title: string;
     children: ReactNode;
 }
-
 export const CatalogueLayout: React.FC<Props> = ({ title, children }) => {
     return (
         <Box>

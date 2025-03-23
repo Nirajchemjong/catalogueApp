@@ -11,7 +11,7 @@ class Program extends Content
     public function __construct()
     {
         $this->colour = 'Red';
-        $this->layout = "square";
+        $this->layout = "polygon";
         $this->clickEvent = "warning";
     }
 }

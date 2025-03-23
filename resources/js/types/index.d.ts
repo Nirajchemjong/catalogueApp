@@ -41,6 +41,10 @@ export interface User {
     [key: string]: unknown; // This allows for additional properties...
 }
 
-export interface data {
-    
+export interface data {}
+export type LayoutType = 'circle' | 'rectangle' | 'polygon';
+
+export interface LayoutCardProps {
+    layoutType: LayoutType;
+    title: string;
 }

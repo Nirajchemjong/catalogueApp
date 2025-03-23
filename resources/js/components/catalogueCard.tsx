@@ -1,4 +1,4 @@
-import { getColorByContentType, getHoverColorByContentType } from '@/lib/utils';
+import { getColorByContentType, getHoverColorByContentType, getShapeStyles } from '@/lib/utils';
 import { Box, Button, Card, CardContent, CardMedia, FormLabel, Typography } from '@mui/material';
 import React from 'react';
 
@@ -41,6 +41,7 @@ const CatalogueCard: React.FC<Props> = ({ item }) => {
         <Card
             onClick={handleClick}
             sx={{
+                ...getShapeStyles(item?.layout),
                 height: '100%',
                 cursor: 'pointer',
                 borderLeft: `5px solid ${baseColor}`,

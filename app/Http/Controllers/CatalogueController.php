@@ -6,7 +6,6 @@ use App\Services\CatalogueServices;
 use App\Services\Course;
 use App\Services\LiveLearning;
 use App\Services\Program;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class CatalogueController extends Controller

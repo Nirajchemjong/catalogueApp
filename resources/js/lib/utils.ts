@@ -44,3 +44,27 @@ export const handleClickEvent = (type: string, title: string): void => {
             alert('No click event specified');
     }
 };
+
+export const getShapeStyles = (layout: string) => {
+    switch (layout.toLowerCase()) {
+        case 'circle':
+            return {
+                borderRadius: '60%',
+                width: '100%',
+                height: '100%',
+                overflow: 'hidden',
+            };
+        case 'polygon':
+            return {
+                clipPath: 'polygon(0% 10%, 0% 60%, 100% 20%)',
+                width: '100%',
+                height: '100%',
+            };
+        case 'rectangle':
+        default:
+            return {
+                borderRadius: 3,
+                // For rectangle, we allow fluid width/height based on content.
+            };
+    }
+};
