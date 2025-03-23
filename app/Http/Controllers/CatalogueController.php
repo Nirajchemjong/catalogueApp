@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\CatalogueServices;
+use App\Services\ExternalAPI\CatalogueServices;
 use App\Services\Course;
 use App\Services\LiveLearning;
 use App\Services\Program;
