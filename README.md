@@ -44,4 +44,4 @@ Catalogue App is a full-stack content catalogue built with **Laravel 12** (backe
 ## RUN IT in DOCKER
 
 1. Docker build -t catalogueapp .
-2. Docker run -d -p 8000:8080 catalougueapp
+2. Docker run -d -p 8080:8080 catalougueapp
